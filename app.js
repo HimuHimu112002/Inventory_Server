@@ -33,15 +33,6 @@ app.use(bodyParser.json())
 const limiter= rateLimit({windowMs:15*60*1000,max:3000})
 app.use(limiter)
 
-// Mongo DB Database Connection
-// let URI="mongodb+srv://<username>:<password>@cluster0.7uslu.mongodb.net/inven?retryWrites=true&w=majority";
-// let OPTION={user:'inventory',pass:'Nkfiq4uwkqzH0D7M',autoIndex:true}
-// mongoose.connect(URI,OPTION,(error)=>{
-//     console.log("Connection Success")
-//     console.log("hello",error)
-// })
-
-
 // Routing Implement
 app.use("/api/v1",router)
 
